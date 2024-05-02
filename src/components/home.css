@@ -1,0 +1,307 @@
+.home-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 30px;
+   
+}
+
+.home-container .form {
+    position: relative;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 18px;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    min-width: 230px;
+    height: auto;
+    min-height: 250px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition: 0.5s;
+}
+
+.form .inputBox1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.inputBox1 .icon{
+    display: flex;
+    position: relative;
+    left: 30px; 
+    transform: translateY(-50%);
+    color: rgb(39, 244, 52);
+    justify-content: center;
+  margin-top: 21px;
+  font-size: 1.2em;
+  filter: drop-shadow(0 0 2px rgb(41,255,52));
+
+
+}
+.inputBox1 .inputlong{
+
+  padding-left: 30px;
+  text-align: center;
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.35),
+  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+  inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  min-height: 40px;
+  height: 5%;
+  max-height: 50px;
+  color: rgb(41, 240, 254);
+  outline: 3px solid #2f465e;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+ 
+ 
+  
+}
+
+.setting-auto{
+    display: flex; 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 2px;
+    color: rgb(58, 165, 241);
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+
+.form .secondInput.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    height: auto; /* Change height to auto */
+    width: auto; /* Change width to auto */
+    animation: expandInput .5s ease-in; /* Apply animation */
+}
+
+@keyframes expandInput {
+    from {
+        height: 0;
+       
+    }
+    to {
+        height: 30px; /* Change to the desired height */
+       
+    }
+}
+
+
+@keyframes SqueezeInput {
+    from {
+        height: 30px;
+       
+    }
+    to {
+        height: 0; 
+       
+    }
+}
+.secondInput.active input{
+    text-align: center;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 3px solid #2f465e;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 5px;
+    height: auto;
+    width: auto;
+    transition: height width .5s ease-in;
+    color: greenyellow;
+    outline: none;
+}
+.secondInput.active input::placeholder{
+    color: rgba(209, 207, 208, 0.718);
+    font-size: 1e,;
+}
+
+.form .secondInput{
+    height: 0px;
+    width: 0px;
+    animation: SqueezeInput 0.5s ease;
+  
+}
+.secondInput input{
+    height: 0;
+    width: 0;
+    animation: SqueezeInput 0.5s ease-in;
+}
+.submitBox{
+position: relative;
+display: flex;
+justify-content: center;
+top: 30px;
+
+
+}
+
+.submitbtn{
+    color: #2f465e;
+    padding-left:  20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: #00dfc5dc;
+    box-shadow: 0px 5px 5px #272b2f,
+    5px 0 5px #272b2f;
+    cursor: pointer;
+}
+.submitbtn:active{
+   filter: drop-shadow(0 0 7px #272b2f);
+   opacity: 0.7;
+}
+.home-container .createdBox {
+    position: relative;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 18px;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    min-width: 230px;
+    height: auto;
+    min-height: 250px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes opacityc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.home-container .createdBox {
+    animation: opacityc 0.5s ease-in forwards;
+}
+
+
+.createdBox .box_title{
+    position: relative;
+    display: block;
+   text-align: center;
+   padding: 5px;
+   font-size: 1.5em;
+   color: rgb(41, 223, 255);
+   font-weight: 600;
+}
+
+.createdBox .linkBox1{
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+}
+
+
+.linkBox1 .genlinkicon{  
+        display: flex;
+        position: relative;
+        left: 25px; 
+        transform: translateY(-50%);
+        color: rgb(41, 240, 254);
+        justify-content: center;
+      margin-top: 21px;
+      font-size: 1.2em;
+      filter: drop-shadow(0 0 2px rgb(41, 240, 254));
+    
+
+}
+.linkBox1 input{
+    
+  padding-left: 30px;
+  text-align: center;
+  border-radius: 25px;
+  background: transparent;
+  min-height: 40px;
+  height: 5%;
+  max-height: 50px;
+  color: rgb(41, 240, 254);
+  outline: 1px solid rgb(39, 220, 244);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.35),
+  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+  inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+ 
+ 
+}
+.createdBox .cbox_btns{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 30px;
+   gap: 1vw;
+}
+.cbox_btns .cbtn{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: calc(0.7em + 0.5vw);
+    cursor: pointer;
+    margin-left: 1vw;
+    background: transparent;
+    box-shadow: -5px -5px 5px rgba(3, 34, 50, 0.1),
+    2px 3px 5px rgba(3, 42, 58, 0.627);
+}
+.btnshare{
+    color: rgb(50, 220, 246);
+    border: 2px solid #2f465e;
+    padding: 3px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+   
+   
+}
+.btncopy{
+    color: rgb(230, 246, 50);
+    border: 2px solid #2f465e;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+}
+.btnnewlink{
+    color: rgb(79, 246, 50);
+    border: 2px solid #2f465e;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-flex; 
+    align-items: center; 
+    min-width: 150px; 
+}
+
+
+

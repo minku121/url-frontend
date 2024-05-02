@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  .navbtn{
+    font-size: 1.7em;
+    margin-right: 15px;
+    transition: all .2s;
+    z-index: 999;
+  }
+  
+  .navbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100vw;
+    z-index: 999;
+  }
+  
+  .navbar h1{
+    font-size: 1.4rem;
+  }
+  
+  .navbar .navelements{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    color: rgb(28, 235, 235);
+    width: 50%;
+  }
+  
+  @media (min-width: 768px) {
+    .navbtn{
+      position: relative;
+      display: none;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .navbar .navelements {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: -1000px;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(25px) saturate(154%);
+        -webkit-backdrop-filter: blur(25px) saturate(154%);
+        background-color: #1a3039;
+        padding: 10px;
+        transition: left .7s ease-in-out; /* Transition for both open and close */
+        font-size: 1.5em;
+        z-index: 99;
+        color: rgb(28, 235, 235);
+    }
+
+   
+  
+    .navbar .navelements.active {
+      position: absolute;
+      display: flex;
+      justify-content: flex-start;
+      gap: 50px;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      backdrop-filter: blur(25px) saturate(154%);
+      -webkit-backdrop-filter: blur(25px) saturate(154%);
+      background-color:#1a3039;
+      padding: 10px;
+      transition: left .7s ease; /* Transition for both open and close */
+      font-size: 1.5em;
+      z-index: 999;
+      color: rgb(28, 235, 235);
+    }
+  }
+  
+  .navelements .loginbtn{
+    position: relative;
+    border:.2px solid rgb(28, 235, 235);
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 1em;
+    color: aliceblue;
+    margin-right: 10%;
+    transition: .2s ease;
+  }
+  
+  .navelements .loginbtn:hover{
+    background-color: rgb(28, 235, 235);
+    color: rgb(16, 16, 16);
+    filter: drop-shadow(0 0 10px rgb(28,235,235));
+    scale: 1.1;
+  }
+  .navlink.active{
+    background-color: rgb(34, 127, 39);
+    margin: 2px 0 2px 0px;
+    border-radius: 25px;
+   font-size: 1.1em;
+  }
+  .navlink:hover{
+    scale: 1.1;
+  }

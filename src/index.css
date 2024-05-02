@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+        background: #223243;
+        overflow-x: hidden;
+    
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+    background-color: rgba(10, 10, 10, 0.642);
+    filter: drop-shadow(0 0 5px cyan);
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(35, 35, 35); 
+    border-radius: 10px;
+    background-color: rgba(1, 1, 1, 0.651);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16, 15, 15, 0.918); 
+    border-radius: 10px;
+  }
